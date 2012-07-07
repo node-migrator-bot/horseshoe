@@ -11,7 +11,7 @@ if (process.argv.indexOf('--live') >= 0) {
   // This assumes you have a file with horseshoe options in json format called
   // config.json in the directory above this script. This config file IS NOT
   // included in the repo so you should create your own.
-  if (!path.existsSync(configFile)) {
+  if (!fs.existsSync(configFile)) {
     console.error('Config file required for live tests!');
     return process.exit(1);
   }
